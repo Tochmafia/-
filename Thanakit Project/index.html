@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>อาชีวะศึกษาเชียงราย</title>
+  <link rel="stylesheet" href="./styles/site.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/logo.png" />
+
+
+</head>
+
+<body>
+  <div class="header">
+    <div id="particles-js"></div>
+    <div class="container">
+      <a href="index.html" class="logo">อาชีวะศึกษาเชียงราย</a>
+      <div class="header-button">
+        <a href="index.html" class="link-button">หน้าหลัก</a>
+        <a href="#contact" class="link-button">ติดต่อเรา</a>
+        <a href="register.html" class="link-button">สมัคร</a>
+        <a href="login.html" class="link-button">ล็อกอิน</a>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <div class="mySlides fade" >
+    <img src="./assets/img1.jpg" style="display: block; margin: auto;" alt="photo1" />
+    <div class="text">อาชีวะศึกษาเชียงราย</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./assets/img3.webp" style="display: block; margin: auto;" alt="photo2" />
+    <div class="text">พื้นที่ปลอดภัยสำหรับเด็ก</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./assets/img2.jpg" style="display: block; margin: auto;" alt="photo3" />
+    <div class="text">การสอนที่ทันสมัย</div>
+  </div>
+
+  <div class="bio">
+    <h1></h1>
+    
+  </div>
+
+  <div class="box">
+    <div class="inside">
+      <h1>ค่านิยมหลัก</h1>
+      <ul>
+        <li>ส่งเสริมความเป็นเลิศทางวิชาการ</li>
+        <li>สร้างความมั่นใจในสภาพแวดล้อมที่ปลอดภัย</li>
+        <li>เรียนดีกีฬาเด่น</li>
+        <li>เน้นกิจกรรม</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bio">
+    <h1>
+
+  </div>
+
+  <div id="contact" class="contact-us">
+
+    <div class="contact-us-container">
+      <h1>ติดต่อเรา</h1>
+      <form method="post">
+        ชื่อจริง.:<input type="text" id="fname" name="firstname" placeholder="ใส่ชื่อ..." maxlength="20"
+          pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" required><br />
+        นามสกุล.:<input type="text" id="lname" name="lastname" placeholder="ใส่นามสกุล..." maxlength="20"
+          pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" required><br />
+        อีเมล.:<input type="email" name="email" placeholder="ใส่อีเมล" maxlength="30" required><br />
+        ที่อยู่.:<input type="text" name="adress" placeholder="ใส่ที่อยู่..." maxlength="50" required><br />
+        เรื่อง.:<textarea id="subject" name="subject" placeholder="เขียนอะไรบางอย่าง.." style="height:200px"
+          required></textarea><br />
+        <input type="submit" value="ส่ง">
+
+      </form>
+      <br />
+      <br />
+      <br />
+    </div>
+  </div>
+
+</body>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 10, density: { enable: true, value_area: 400 } },
+      color: { value: "#fb0" },
+      shape: {
+        type: "polygon",
+        stroke: { width: 0, color: "#000" },
+        polygon: { nb_sides: 6 },
+        image: { src: "img/github.svg", width: 100, height: 100 },
+      },
+      opacity: {
+        value: 0.8,
+        random: true,
+        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+      },
+      size: {
+        value: 60,
+        random: false,
+        anim: { enable: true, speed: 10, size_min: 40, sync: false },
+      },
+      line_linked: {
+        enable: false,
+        distance: 200,
+        color: "#ffffff",
+        opacity: 1,
+        width: 2,
+      },
+      move: {
+        enable: true,
+        speed: 8,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 1200 },
+      },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: false, mode: "grab" },
+        onclick: { enable: false, mode: "push" },
+        resize: true,
+      },
+      modes: {
+        grab: { distance: 400, line_linked: { opacity: 1 } },
+        bubble: {
+          distance: 400,
+          size: 40,
+          duration: 2,
+          opacity: 8,
+          speed: 3,
+        },
+        repulse: { distance: 200, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: { particles_nb: 2 },
+      },
+    },
+    retina_detect: true,
+  });
+  requestAnimationFrame(update);
+</script>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3500);
+  }
+</script>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/images/course-video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            <h6>Graduate School of Management</h6>
+            <h2><em>Your</em> Classroom</h2>
+            <div class="main-button">
+                <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Main Banner Area End ***** -->
+</html>
